@@ -21,7 +21,7 @@ export default function Home() {
   }, [])
   
   return <>
-  <Grid container spacing={3} sx={{marginBlock: "30px"}}>
+ {allPosts?.length > 0 ? <Grid container spacing={3} sx={{marginBlock: "30px"}}>
   <Grid item sm={3}></Grid>
 
   <Grid item sm={6} sx={{paddingBlock: "10px"}}>
@@ -31,7 +31,7 @@ export default function Home() {
   </Grid>
 
   <Grid item sm={3}></Grid>
-</Grid>
+</Grid> : <Loading />}
    
   </>
 }
